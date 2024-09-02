@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "essay"
 # All dates must be YYYY-MM-DD format!
-date: 9/2/2024
+date: 2/9/2024
 published: true
 labels:
   - essay
