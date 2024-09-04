@@ -4,7 +4,7 @@ type: essay
 title: "essay"
 # All dates must be YYYY-MM-DD format!
 date: 2/9/2024
-published: true
+published: false
 labels:
   - essay
   - essay
