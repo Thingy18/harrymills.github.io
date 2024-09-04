@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/placeholder-square.jpg
+image: img/Joan_pujol_garcia.jpg
 title: "Documentary of Agent Garbo"
 date: 2022
 published: true
