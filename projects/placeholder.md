@@ -4,7 +4,7 @@ type: project
 image: img/placeholder-square.jpg
 title: "Placeholder"
 date: 9/2/2024
-published: true
+published: false
 labels:
   - Placeholder
   - Placeholder
