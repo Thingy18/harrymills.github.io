@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/placeholder-square.jpg
+image: img/desmos-graph (2).png
 title: "Math Picture"
 date: 2022
 published: true
