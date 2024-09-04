@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/png-clipart-pokeball-thumbnail.png
+image: img/png-clipart-pokeball-pokeball-thumbnail.png
 title: "Pokemon Damage Calculator"
 date: jan-may 2022
 published: true
