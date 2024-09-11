@@ -12,8 +12,11 @@ labels:
 
 ## What is a smart question?
 
-2
+Eric Steven Raymond wrote a whole essay on smart questions and how to write them that can be found here
+[How To Ask Questions The Smart Way]{http://www.catb.org/esr/faqs/smart-questions.html}
 
-## What is a unsmart question?
+## An example of a smart question
 
 4
+
+## An example of an unsmart question
