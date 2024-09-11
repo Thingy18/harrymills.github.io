@@ -13,7 +13,10 @@ labels:
 ## What is a smart question?
 
 Eric Steven Raymond wrote a whole essay on smart questions and how to write them that can be found here
+
 [How To Ask Questions The Smart Way](http://www.catb.org/esr/faqs/smart-questions.html)
+
+While his essay goes over every single thing that you should know when asking technical questions but there were several big ideas. 
 
 ## An example of a smart question
 
