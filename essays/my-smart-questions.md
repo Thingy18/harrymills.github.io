@@ -13,7 +13,7 @@ labels:
 ## What is a smart question?
 
 Eric Steven Raymond wrote a whole essay on smart questions and how to write them that can be found here
-[How To Ask Questions The Smart Way]{http://www.catb.org/esr/faqs/smart-questions.html}
+[How To Ask Questions The Smart Way](http://www.catb.org/esr/faqs/smart-questions.html)
 
 ## An example of a smart question
 
