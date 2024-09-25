@@ -19,5 +19,5 @@ labels:
 
 4
 
-<img width="200px" class="rounded float-start pe-4" src="../img/Screenshot_2024-09-25_102632.png">
-<img width="200px" class="rounded float-start pe-4" src="../img/Screenshot_2024-09-25_102700.png">
+<img width="200px" class="rounded float-start pe-4" src="../img/Screenshot 2024-09-25 102632.png">
+<img width="200px" class="rounded float-start pe-4" src="../img/Screenshot 2024-09-25 102700.png">
