@@ -18,3 +18,6 @@ labels:
 ## My Thoughts On ESLint
 
 4
+
+<img width="200px" class="rounded float-start pe-4" src="../img/Screenshot_2024-09-25_102632.png">
+<img width="200px" class="rounded float-start pe-4" src="../img/Screenshot_2024-09-25_102700.png">
