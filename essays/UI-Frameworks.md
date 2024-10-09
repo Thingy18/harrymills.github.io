@@ -17,8 +17,8 @@ So far I have made 4 webpages with Bootstrap 5 and I have had the same experienc
 
 <img width="1000px" class="text-center p-4" src="../img/Bootstrap5webpage.png">
 
-If you pull up a side by side of the original and that image you will see that everything is just a little bit off. It took me about 2-3 hours to make that page and of that maybe 15-20 minutes was me writing out the HTML side of the code and the rest of that time was spent trying to format things. I should clarify that writing out the HTML code entirely consisted of me hitting tab when github copilot suggested things and then deleting a couple of tags. Most of the formatting troubles came from trying to figure out exactly which tags I needed add the Bootstrap 5 Justify-Content classes to.
+If you pull up a side by side of the original and that image you will see that everything is just a little bit off. It took me about 2-3 hours to make that page and of that maybe 15-20 minutes was me writing out the HTML side of the code and the rest of that time was spent trying to format things. I should clarify that writing out the HTML code entirely consisted of me hitting tab when github copilot suggested things and then deleting a couple of tags. Most of the formatting troubles came from trying to figure out exactly which tags I needed add the Bootstrap 5 Justify-Content classes to which was surprisingly difficult. I got things to look alright but I was generally upset I could not get a couple of things to look perfect.
 
-## Is it useful?
+## Is Bootstrap 5 useful?
 
-6
+After the scathing review I have just given I am guessing any one reading this essay might be suprised that my answer is Bootstrap 5 is groundbreakingly useful. This is contingent on the use of github copilot or a similar ai being used with it. 
