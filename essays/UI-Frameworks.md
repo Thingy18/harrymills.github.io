@@ -21,4 +21,4 @@ If you pull up a side by side of the original and that image you will see that e
 
 ## Is Bootstrap 5 useful?
 
-After the scathing review I have just given I am guessing any one reading this essay might be suprised that my answer is Bootstrap 5 is groundbreakingly useful. This is contingent on the use of github copilot or a similar ai being used with it. 
+After the scathing review I have just given I am guessing that any one reading this essay might be suprised that my answer is Bootstrap 5 is groundbreakingly useful, especially with the use of github copilot or a similar ai. I said earlier that I did not know what most of the Bootstrap 5 classes do. This is why it took me so long to format things be
