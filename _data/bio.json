@@ -22,7 +22,9 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": ["Java"]
+      "keywords": ["Java"],
+      "keywords": ["Typescript"],
+      "keywords": ["Html and CSS"]
     }
   ],
   "education": [
