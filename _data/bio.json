@@ -31,17 +31,15 @@
       "area": "Computer Science (expected Spring, 2027)",
       "studyType": "B.S.",
       "startDate": "2023",
-      "endDate": "Present",
-      "courses": [
-      ]
+      "endDate": "Present"
     }
   ],
   "work": [
     {
       "company": "Act 1 Photo Booths",
       "website": "https://act1photobooths.com/",
-      "startDate": "2022-06",
-      "endDate": "2022-08",
+      "startDate": "2022-06-01",
+      "endDate": "2022-08-01",
       "summary": "Set up photo booths for events" 
     }
   ],
