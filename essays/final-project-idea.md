@@ -14,7 +14,7 @@ Throughout my 2 and half semesters attending UH Manoa I have consistently had tr
 
 # Approach
 
-THere would be filters for different categories of information and sources. So one could filter for things about classes posted by professores for instance. Students could set up email and text message notifications. There would be options for posts to link to an email or webpage so that the information does not need to be repeated in multiple locations. The goal would not be to have the actual information on the calendar but rather it would be a nexus to learn of the existence of the information. 
+There would be filters for different categories of information and sources. So one could filter for things about classes posted by professores for instance. Students could set up email and text message notifications. There would be options for posts to link to an email or webpage so that the information does not need to be repeated in multiple locations. The goal would not be to have the actual information on the calendar but rather it would be a nexus to learn of the existence of the information. 
 
 # Mockup page ideas
 
