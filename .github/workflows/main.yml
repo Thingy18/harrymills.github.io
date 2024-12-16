@@ -17,7 +17,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Updated to the new runner
     steps:
       # Step 1: Checkout repository
       - name: Checkout
@@ -57,17 +57,17 @@ jobs:
           cd ~/.rbenv && src/configure && make -C src
           git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-      # Step 5: Configure rbenv in PATH
+      # Step 5: Configure rbenv
       - name: Configure rbenv
         run: |
-          echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> $GITHUB_ENV
-          echo 'eval "$(rbenv init -)"' >> $GITHUB_ENV
+          echo "$HOME/.rbenv/bin" >> $GITHUB_PATH
+          echo "$HOME/.rbenv/plugins/ruby-build/bin" >> $GITHUB_PATH
+          rbenv init - > rbenv.sh
+          echo "source rbenv.sh" >> $GITHUB_ENV
 
       # Step 6: Install Ruby
       - name: Install Ruby
         run: |
-          export PATH="$HOME/.rbenv/bin:$PATH"
-          eval "$(rbenv init -)"
           rbenv install -s 3.1.4
           rbenv global 3.1.4
 
@@ -108,7 +108,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Updated to the new runner
     needs: build
     steps:
       # Step 1: Deploy to GitHub Pages
