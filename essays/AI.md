@@ -58,8 +58,9 @@ I do not think there is a big picture difference. For someone who has grown up a
 
 # Future considerations on the use of AI
 
-The end result of integrating AI into software engineering courses should be making a human coder obsolete
+The end result of integrating AI into software engineering courses should be making a human writing code obsolete. There will definitely be a decrease in the comprehension of lines of code but that really should be the goal. Coding languages can all be boiled down to binary. No one codes in binary anymore because it is faster to code in the coding languages. If you gave a software engineer a binary file I highly dought they would no what it does. But if you gave them the same file in java they would probably be able to tell you. Does that mean java is bad? Of course not. AI is not an exact analogy to this but the principle is the same. Increasing the speed and ease at which people can code. As AI improves it should take a greater focus. Classes should be geared towards how to properly use AI and where its shortcomings are.
+
 
 # Wrapping things up
 
- I think there will definitely be a decrease in the comprehension of lines of code but that really should be the goal. Coding languages can all be boiled down to binary. No one codes in binary anymore because it is faster to code in the coding languages. If you gave a software engineer a binary file I highly dought they would no what it does. But if you gave them the same file in java they would probably be able to tell you. Does that mean java is bad? Of course not. AI is not an exact analogy to this but the principle is the same. Increasing the speed and ease at which people can code. 
+Currently AI is a tool that can be used to help write code. Eventually it will become the platform for writing code. Just like modern coding languages it will have its problems and courses should teach them accordingly. Focusing on where AI should not be used is just as important as learning where it can be used.
