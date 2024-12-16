@@ -19,9 +19,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Step 2: Cache rbenv and Ruby
+      - name: Cache rbenv
+        uses: actions/cache@v3
+        with:
+          path: ~/.rbenv
+          key: ${{ runner.os }}-rbenv-${{ hashFiles('Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-rbenv-
+
+      # Step 3: Install dependencies for rbenv and ruby-build
       - name: Install dependencies for rbenv and ruby-build
         run: |
           sudo apt-get update
@@ -39,42 +50,58 @@ jobs:
             software-properties-common \
             libffi-dev
 
+      # Step 4: Install rbenv and ruby-build
       - name: Install rbenv and ruby-build
         run: |
           git clone https://github.com/rbenv/rbenv.git ~/.rbenv
           cd ~/.rbenv && src/configure && make -C src
-          echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-          echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-          source ~/.bashrc
           git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-          echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-          source ~/.bashrc
 
+      # Step 5: Configure rbenv in PATH
+      - name: Configure rbenv
+        run: |
+          echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> $GITHUB_ENV
+          echo 'eval "$(rbenv init -)"' >> $GITHUB_ENV
+
+      # Step 6: Install Ruby
       - name: Install Ruby
         run: |
           export PATH="$HOME/.rbenv/bin:$PATH"
           eval "$(rbenv init -)"
-          rbenv install 3.1.4
+          rbenv install -s 3.1.4
           rbenv global 3.1.4
 
+      # Step 7: Debug Ruby Installation
+      - name: Debug Ruby Installation
+        run: |
+          which ruby
+          ruby -v
+          gem -v
+
+      # Step 8: Setup Ruby with Bundler cache
       - name: Setup Ruby
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1.4'
           bundler-cache: true
           cache-version: 0
 
+      # Step 9: Setup Pages
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
 
+      # Step 10: Build with Jekyll
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
+      # Step 11: Upload artifact with a name
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          name: jekyll-site
 
   # Deployment job
   deploy:
@@ -84,6 +111,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # Step 1: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
