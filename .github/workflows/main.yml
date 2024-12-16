@@ -17,22 +17,13 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-24.04  # Updated to the new runner
+    runs-on: ubuntu-24.04  # Explicitly using the updated runner
     steps:
       # Step 1: Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Step 2: Cache rbenv and Ruby
-      - name: Cache rbenv
-        uses: actions/cache@v3
-        with:
-          path: ~/.rbenv
-          key: ${{ runner.os }}-rbenv-${{ hashFiles('Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-rbenv-
-
-      # Step 3: Install dependencies for rbenv and ruby-build
+      # Step 2: Install dependencies for rbenv and ruby-build
       - name: Install dependencies for rbenv and ruby-build
         run: |
           sudo apt-get update
@@ -50,24 +41,32 @@ jobs:
             software-properties-common \
             libffi-dev
 
-      # Step 4: Install rbenv and ruby-build
+      # Step 3: Install rbenv and ruby-build
       - name: Install rbenv and ruby-build
         run: |
           git clone https://github.com/rbenv/rbenv.git ~/.rbenv
           cd ~/.rbenv && src/configure && make -C src
           git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-      # Step 5: Configure rbenv
+      # Step 4: Configure rbenv in PATH
       - name: Configure rbenv
         run: |
+          echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+          echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+          source ~/.bashrc
           echo "$HOME/.rbenv/bin" >> $GITHUB_PATH
           echo "$HOME/.rbenv/plugins/ruby-build/bin" >> $GITHUB_PATH
-          rbenv init - > rbenv.sh
-          echo "source rbenv.sh" >> $GITHUB_ENV
+
+      # Step 5: Verify rbenv Installation
+      - name: Verify rbenv Installation
+        run: |
+          echo $PATH
+          rbenv --version
 
       # Step 6: Install Ruby
       - name: Install Ruby
         run: |
+          eval "$(rbenv init -)"
           rbenv install -s 3.1.4
           rbenv global 3.1.4
 
@@ -108,7 +107,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-24.04  # Updated to the new runner
+    runs-on: ubuntu-24.04  # Explicitly using the updated runner
     needs: build
     steps:
       # Step 1: Deploy to GitHub Pages
