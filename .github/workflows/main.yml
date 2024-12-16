@@ -17,7 +17,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-24.04  # Explicitly using the updated runner
+    runs-on: ubuntu-24.04
     steps:
       # Step 1: Checkout repository
       - name: Checkout
@@ -57,57 +57,43 @@ jobs:
           echo "$HOME/.rbenv/bin" >> $GITHUB_PATH
           echo "$HOME/.rbenv/plugins/ruby-build/bin" >> $GITHUB_PATH
 
-      # Step 5: Verify rbenv Installation
-      - name: Verify rbenv Installation
-        run: |
-          echo $PATH
-          rbenv --version
-
-      # Step 6: Install Ruby
+      # Step 5: Install Ruby
       - name: Install Ruby
         run: |
           eval "$(rbenv init -)"
           rbenv install -s 3.1.4
           rbenv global 3.1.4
 
-      # Step 7: Debug Ruby Installation
-      - name: Debug Ruby Installation
-        run: |
-          which ruby
-          ruby -v
-          gem -v
-
-      # Step 8: Setup Ruby with Bundler cache
+      # Step 6: Setup Ruby with Bundler cache
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1.4'
           bundler-cache: true
-          cache-version: 0
 
-      # Step 9: Setup Pages
+      # Step 7: Setup Pages
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
 
-      # Step 10: Build with Jekyll
+      # Step 8: Build with Jekyll
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
-      # Step 11: Upload artifact with a name
+      # Step 9: Upload artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: jekyll-site
+          name: github-pages  # Ensure artifact name matches
 
   # Deployment job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-24.04  # Explicitly using the updated runner
+    runs-on: ubuntu-24.04
     needs: build
     steps:
       # Step 1: Deploy to GitHub Pages
