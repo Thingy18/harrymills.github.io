@@ -16,4 +16,4 @@ Open source software development refers to public code that anyone can access fo
 
 ## Functional Programming 
 
-Functional programming is the idea of a program that uses only functions to work. The idea is that there is not internal data held and the only thing that the program does is take inputs and produces outputs. I never went out of my way to program projects like 
+Functional programming is the idea of a program that uses only functions to work. The idea is that there is not internal data held and the only thing that the program does is take inputs and produces outputs. I never went out of my way to program projects like this but several did turn out that way. I am sure I will utilize functional programming in future endeavors.
