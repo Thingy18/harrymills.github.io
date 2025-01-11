@@ -10,7 +10,7 @@
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "Thingy18", "url": "http://github.com/Thingy18" },
-      { "network": "linkedin", "username": "Harrison Mills", "url": "www.linkedin.com/in/harrison-mills-04796a325" }
+      { "network": "linkedin", "username": "Harrison Mills", "url": "www.linkedin.com/in/harrison-mills-04796a325/" }
     ]
   },
   "interests": [
@@ -21,10 +21,16 @@
   ],
   "skills": [
     {
-      "name": "Languages and Frameworks",
-      "keywords": ["Java", "Typescript", "Html", "CSS", "Eclipse", "Visual Studio Code", "Microsoft Office Suite", "Google Apps", "Github", "Github Copilot", "ChatGPT"],
-      "name": "Languages and Frameworks",
-      "keywords": ["Java", "Typescript", "Html", "CSS", "Eclipse", "Visual Studio Code", "Microsoft Office Suite", "Google Apps", "Github", "Github Copilot", "ChatGPT"]
+      "name": "Languages",
+      "keywords": ["Java", "Typescript", "Html", "CSS"]
+    },
+    {
+      "name": "IDE",
+      "keywords": ["Eclipse", "Visual Studio Code"]
+    },
+    {
+      "name": "Other",
+      "keywords": ["Microsoft Office Suite", "Google Apps", "Github", "Github Copilot", "ChatGPT"]
     }
   ],
   "education": [
