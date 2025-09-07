@@ -22,7 +22,7 @@
   "skills": [
     {
       "name": "Languages",
-      "keywords": ["Java", "Typescript", "Html", "CSS"]
+      "keywords": ["Java", "Typescript", "Html", "CSS", "Javascript", "C", "C++", "Python"]
     },
     {
       "name": "IDE",
@@ -30,7 +30,7 @@
     },
     {
       "name": "Other",
-      "keywords": ["Microsoft Office Suite", "Google Apps", "Github", "Github Copilot", "ChatGPT"]
+      "keywords": ["Object-Oriented Programming", "GitHub", "Bootstrap", "Command Line", "ChatGPT", "GitHubt Copilot"]
     }
   ],
   "education": [
